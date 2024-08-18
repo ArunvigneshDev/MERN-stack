@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    min-height: 10vh;
+background: linear-gradient(90deg, rgb(141, 7, 7) 15%, rgb(3, 1, 17) 100%);
+}
+
+
+
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 190px;
+}
+
+.nav-buttons .btn {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    background-color: #fff;
+}
+
+.nav-buttons .btn:hover {
+    background-color: #f0f0f0;
+    color:black
+}
+
+.nav-buttons .active {
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+.container {
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+
+
+.login-form, .signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form input, .signup-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.login-form button, .signup-form button {
+    padding: 10px;
+    background-color:black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login-form button:hover, .signup-form button:hover {
+    background-color:red;
+}
+
+.forgot-password, .signup-link, .login-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.forgot-password, .signup-link a, .login-link a {
+    color: orangered;
+    text-decoration: none;
+}
+
+.forgot-password:hover, .signup-link a:hover, .login-link a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="comedy.css">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+          <img src="assets/logo.webp" style="width:80px; height:50px" alt="K-FLICKS">
+          <h4 class="d-inline-block">K-FLICKS</h4>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link px-3 py-2" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3 py-2" href="#About">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3 py-2" href="#">CONTACT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3 py-2" href="login.html">SIGN IN</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    <div class="container">
+        <h2>Nanban</h2>
+        <div class="row">
+            <div class="col">
+                <img src="assets/comedy/nanban.jpg" alt="">
+            </div>
+            <div class="col">
+                <div class="details">
+                    <table>
+                        <tr>
+                            <td class="fw-bold">Directed by</td>
+                            <td>Shankar.S</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Written by</td>
+                            <td>Shankar.S</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Produced by</td>
+                            <td>	
+                                Ravi Shankar Prasad
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Starring</td>
+                            <td>	
+                                Vijay<br>
+                                Jiiva<br>
+                                Srikanth<br>
+                                Ileana D'Cruz
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Cinematography</td>
+                            <td>Manoj Paramahamsa</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Edited by</td>
+                            <td>Anthony</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Music by</td>
+                            <td>Harris Jayaraj</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Production company</td>
+                            <td>Gemini Film Circuit</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Distributed by</td>
+                            <td>Gemini Filmn Circuit</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Release date</td>
+                            <td> 12 January 2012 </td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Budget</td>
+                            <td>est. ₹55 crore</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Box office</td>
+                            <td>est. ₹150 crore</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        
+
+        <div class="review-container">
+            <a class="btn py-2 px-3 " onclick="openPopup()">Add review</a class="btn">
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+    <div class="review-getter popup">
+        <input type="text" id="username" placeholder="Enter your name ">
+        <textarea name="review" id="reviewText"  rows="8" cols="50" placeholder="Enter your review"></textarea>
+        <a class="btn py-2 px-3 " onclick="closePopup()" onclick="postReview()" id="postReview">Post review</a class="btn">
+    </div>
+
+    <h2 id="review-header" class="review-header text-center" style="display: none;">Reviews</h2>
+
+    <div class="reviews"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+       
+    </script>
+    <script>
+         let count = 0;
+         function openPopup() {
+            document.body.classList.add('popup-active');
+        }
+
+        function closePopup() {
+            document.body.classList.remove('popup-active');
+        }
+
+
+        document.getElementById("postReview").addEventListener('click', () => {
+    const username = document.getElementById("username").value;
+    const reviewText = document.getElementById("reviewText").value;
+    const currentDate = new Date();
+    if (username && reviewText) {
+        // Create the review container
+        const reviewContainer = document.createElement("div");
+        reviewContainer.classList.add("review");
+        count++;
+
+        // Review author
+        const reviewAuthor = document.createElement("div");
+        reviewAuthor.classList.add("review-author");
+        reviewAuthor.innerText = username;
+        reviewContainer.appendChild(reviewAuthor);
+
+        // Review content
+        const reviewContent = document.createElement("div");
+        reviewContent.classList.add("review-content");
+        reviewContent.innerText = reviewText;
+        reviewContainer.appendChild(reviewContent);
+
+        // Review date
+        const reviewDate = document.createElement("div");
+        reviewDate.classList.add("review-date");
+        reviewDate.innerText = currentDate.toLocaleDateString();
+        reviewContainer.appendChild(reviewDate);
+
+        // Review time
+        const reviewTime = document.createElement("div");
+        reviewTime.classList.add("review-time");
+        reviewTime.innerText = currentDate.toLocaleTimeString();
+        reviewContainer.appendChild(reviewTime);
+
+        // Delete icon
+        const deleteIcon = document.createElement("span");
+        deleteIcon.classList.add("delete-icon");
+        deleteIcon.innerHTML = "&times;";
+        deleteIcon.onclick = () => {
+            reviewContainer.remove();
+            count--;
+            toggleReviewHeader();
+        };
+        reviewContainer.appendChild(deleteIcon);
+
+        // Append the review container to the reviews div
+        document.querySelector(".reviews").appendChild(reviewContainer);
+
+        toggleReviewHeader();
+
+        // if(count){
+        //     document.getElementById("review-header").style.display = "block";
+        // }else{
+        //     document.getElementById("review-header").style.display = "none";
+        // }
+
+
+        // Clear the input fields
+        document.getElementById("username").value = '';
+        document.getElementById("reviewText").value = '';
+
+        // Close the popup
+        closePopup();
+    } else {
+        alert("Please fill out both fields.");
+    }
+});
+
+function toggleReviewHeader() {
+        if (count > 0) {
+            document.getElementById("review-header").style.display = "block";
+        } else {
+            document.getElementById("review-header").style.display = "none";
+        }
+    }
+
+    </script>
+
+</body>
+</html>
+
+
+

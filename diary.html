@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diary</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">  
+    <link rel="stylesheet" href="horror.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <a class="navbar-brand" href="#">
+          <img src="assets/logo.webp" style="width:80px; height:50px" alt="K-FLICKS">
+          <h4 class="d-inline-block">K-FLICKS</h4>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link px-3 py-2" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3 py-2" href="index.html">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3 py-2" href="index.html">CONTACT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3 py-2" href="login.html">SIGN IN</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <div class="container">
+        <h2>About Diary</h2>
+        <div class="row">
+            <div class="col">
+                <img src="https://static.moviecrow.com/gallery/20220823/203664-di2.jpg" alt="Diary Movie Poster">
+            </div>
+            <div class="col">
+                <div class="details">
+                    <table>
+                        <tr>
+                            <td class="fw-bold">Directed by</td>
+                            <td>Innasi Pandiyan</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Written by</td>
+                            <td>Innasi Pandiyan</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Produced by</td>
+                            <td>S. Kathiresan</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Starring</td>
+                            <td>Arulnithi, Pavithra Marimuthu</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Cinematography</td>
+                            <td>Aravinnd Singh</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Edited by</td>
+                            <td>S. P. Raja Sethupathi</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Music by</td>
+                            <td>Ron Ethan Yohann</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Production company</td>
+                            <td>Five Star Creations LLP</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Distributed by</td>
+                            <td>Red Giant Movies</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Release date</td>
+                            <td>26 August 2022</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Running time</td>
+                            <td>132 minutes</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Country</td>
+                            <td>India</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Language</td>
+                            <td>Tamil</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="review-container">
+            <a class="btn py-2 px-3" onclick="openPopup()">Add review</a>
+        </div>
+
+        <div class="review-getter popup">
+            <input type="text" id="username" placeholder="Enter your name">
+            <textarea id="reviewText" rows="8" cols="50" placeholder="Enter your review"></textarea>
+            <a class="btn py-2 px-3" onclick="postReview()">Post review</a>
+        </div>
+    </div>
+
+    <h2 id="review-header" class="review-header text-center">Reviews</h2>
+
+    <div class="reviews"></div>
+
+    <div class="overlay"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        let count = 0;
+
+        function openPopup() {
+            document.body.classList.add('popup-active');
+        }
+
+        function closePopup() {
+            document.body.classList.remove('popup-active');
+        }
+
+        function postReview() {
+            const username = document.getElementById("username").value;
+            const reviewText = document.getElementById("reviewText").value;
+            const currentDate = new Date();
+            
+            if (username && reviewText) {
+                // Create the review container
+                const reviewContainer = document.createElement("div");
+                reviewContainer.classList.add("review");
+                count++;
+
+                // Review author
+                const reviewAuthor = document.createElement("div");
+                reviewAuthor.classList.add("review-author");
+                reviewAuthor.innerText = username;
+                reviewContainer.appendChild(reviewAuthor);
+
+                // Review content
+                const reviewContent = document.createElement("div");
+                reviewContent.classList.add("review-content");
+                reviewContent.innerText = reviewText;
+                reviewContainer.appendChild(reviewContent);
+
+                // Review date and time
+                const reviewDate = document.createElement("div");
+                reviewDate.classList.add("review-date");
+                reviewDate.innerText = currentDate.toDateString();
+                reviewContainer.appendChild(reviewDate);
+
+                const reviewTime = document.createElement("div");
+                reviewTime.classList.add("review-time");
+                reviewTime.innerText = currentDate.toLocaleTimeString();
+                reviewContainer.appendChild(reviewTime);
+
+                // Review delete icon
+                const deleteIcon = document.createElement("div");
+                deleteIcon.classList.add("delete-icon");
+                deleteIcon.innerHTML = "&times;";
+                deleteIcon.onclick = function() {
+                    reviewContainer.remove();
+                    updateReviewHeader();
+                };
+                reviewContainer.appendChild(deleteIcon);
+
+                // Append to reviews section
+                const reviewsSection = document.querySelector(".reviews");
+                reviewsSection.appendChild(reviewContainer);
+
+                // Update review header visibility
+                updateReviewHeader();
+
+                // Clear input fields
+                document.getElementById("username").value = "";
+                document.getElementById("reviewText").value = "";
+
+                // Close popup
+                closePopup();
+            }
+        }
+
+        function updateReviewHeader() {
+            const reviewHeader = document.getElementById("review-header");
+            const reviewsSection = document.querySelector(".reviews");
+            if (reviewsSection.children.length > 0) {
+                reviewHeader.style.display = "block";
+            } else {
+                reviewHeader.style.display = "none";
+            }
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

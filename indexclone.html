@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Review System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style >
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+        .carousel-item img {
+    padding: 0;
+    margin: 0;
+}
+
+.carousel-item {
+    padding: 0;
+    margin: 0;
+}
+
+
+.navbar ,body{
+    background-image: linear-gradient(to right, red, black);
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: white !important;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Navbar link styles */
+.navbar-nav .nav-link {
+    color: white !important;
+    padding: 10px 30px; /* Adjust padding for better spacing */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition effect */
+    border-radius: 20px;
+    margin-right: 35px;
+}
+
+/* Navbar link hover effect */
+.navbar-nav .nav-link:hover {
+    background-color: red; /* Change background color on hover */
+    color: white !important; /* Ensure text color remains white */
+}
+
+        
+        .about img{
+           width:800px;
+           height: 600px; 
+        }
+
+        .about img{
+           width:800px;
+           height: 600px; 
+        }
+
+        .about{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            /* padding-top: 100px; */
+            /* background-color: aliceblue; */
+            width: 100%;
+            height: 100vh;
+        }
+
+        .about p{
+            text-align: justify;
+            color: white;
+        }
+
+        .about h2{
+            font-size: 35px;
+            margin: 0 0 50px 50px;
+            font-family: sans-serif;
+            padding-top: 50px;
+            color: red;
+        }
+
+        .about p{
+            margin: 70px 50px 50px 50px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 80%;
+            line-height: 28px;
+        }
+
+        .top-rated-movies-section{
+            padding: 70px 0 70px 0;
+        }
+
+        .top-rated-movies-section .cards{
+            margin: 100px 0 0 0;
+        }
+
+        .top-rated-movies-section h2{
+            font-size: 30px;
+            margin: 50px 0 100px 0;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: red;
+        }
+
+        .top-rated-movies-section .card{
+            margin-bottom: 80px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        /* Genres  */
+
+        .geners-section{
+            padding: 70px 0 70px 0;
+        }
+
+        .geners-section .cards{
+            margin: 100px 0 0 0;
+        }
+
+        .geners-section h2{
+            font-size: 37px;
+            margin: 50px 0 50px 0;
+            text-align: center;
+            color: red;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .geners-section .card{
+            margin-bottom: 80px;
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;        }
+
+        .geners-section button:hover{
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            cursor: pointer;
+        }
+
+        /* .recent-reviews-section{
+            background-color: rgb(228, 223, 223);
+        } */
+
+        .recent-reviews-section>h1{
+            padding: 120px 0 60px 0;
+            color: white;
+        }
+
+        .recent-reviews-section .recent-review{
+            background-color: blanchedalmond;
+            width: 300px;
+            padding: 20px;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        .recent-reviews-section .recent-review h3{
+            text-align: center;
+            margin: 20px 0 10px 0;
+        }
+
+        .recent-reviews-section{
+            padding-bottom: 150px;
+        }
+
+        .recent-reviews{
+            margin: 50px 0 0 0;
+        }
+
+        .recent-review h4,.recent-review p{
+            font-size: 15px;
+        }
+
+        /*footer section*/
+
+        .footer-section{
+            text-align: center;
+        }
+
+        .footer-section .footer-logo{
+            font-size: 20px;
+            color: white;
+            padding: 90px 0 50px 0;
+        }
+
+        .footer-section ul{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .footer-section ul li{
+            list-style-type: none;
+            font-size: 22px;
+        }
+
+        .footer-section .social-medias {
+            width: 300px; 
+            margin-left: 39%;
+        }
+
+        a{
+            color: white;
+            text-decoration: none;
+        }
+
+
+
+
+        @media screen and (max-width:758px){
+            .about{
+                display: flex;
+                flex-direction: column;
+                padding-top: 40px;
+                height: auto;
+            } 
+
+            .about img{
+                width:350px;
+                height: 300px; 
+            }
+            .about p{
+                margin: 70px 50px 50px 40px;
+                font-size: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                width: 80%;
+                line-height: 28px;
+            }
+
+            .about h2{
+                font-size: 35px;
+                margin: 50px 0 50px 0;
+                font-family: sans-serif;
+                padding-top: 30px;
+                color: red;
+                text-align: center;
+            }
+
+            .top-rated-movies-section .cards,.geners-section .cards{
+                flex-direction: column;
+                margin-left: 55px;
+            }
+
+            .top-rated-movies-section h2,.geners-section .cards{
+                font-size: 37px;
+                margin: 100px 0 100px 0;
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .geners-section .cards{
+                margin-left: 13%;
+            }
+
+            .footer-section .social-medias {
+                width: 250px; 
+                margin-left: 15%;
+            }
+
+            .recent-reviews {
+                flex-direction: column;
+                margin-left: 20px;
+            }
+
+        }
+
+    </style>
+</head>
+<body class="bg-dark">
+
+
+    <div class="dhivesh">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+              <img src="assets/logo.webp" style="width:80px; height:50px" alt="K-FLICKS">
+              <h4 class="d-inline-block">K-FLICKS</h4>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link px-3 py-2" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-3 py-2" href="#">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-3 py-2" href="#">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-3 py-2" href="#">SERVICE</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          
+
+          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://prod98.togglestatic.com/shain/v1/dataservice/ResizeImage/$value?Format=%27jpg%27&Quality=85&ImageId=%277360887%27&EntityType=%27Item%27&EntityId=%27441754%27&Width=2160&Height=720&ResizeAction=%27fill%27&HorizontalAlignment=%27center%27&VerticalAlignment=%27top%27" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+    
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://prod98.togglestatic.com/shain/v1/dataservice/ResizeImage/$value?Format=%27jpg%27&Quality=85&ImageId=%277361641%27&EntityType=%27Item%27&EntityId=%27441876%27&Width=2160&Height=720&ResizeAction=%27fill%27&HorizontalAlignment=%27center%27&VerticalAlignment=%27top%27" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://prod98.togglestatic.com/shain/v1/dataservice/ResizeImage/$value?Format=%27jpg%27&Quality=85&ImageId=%277215659%27&EntityType=%27Item%27&EntityId=%27432553%27&Width=2160&Height=720&ResizeAction=%27fill%27&HorizontalAlignment=%27center%27&VerticalAlignment=%27top%27" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </div>
+
+
+    <div class="about d-flex flex-wrap-col">
+        <img src="assets/about-hd.png" alt="about">
+        <div class="about-content">
+            <h2 class="text-white">About us</h2>
+            <p>
+                K-FLICKS is a movie review website designed to provide users with insightful and engaging reviews of the latest films. The site features a sleek and user-friendly interface, making it easy for visitors to browse through reviews, read summaries, and view ratings. K-FLICKS includes a dynamic navbar that is fully responsive, ensuring a seamless experience across all devices. The website also boasts an image carousel that showcases the latest movie releases, enhancing visual appeal and user engagement. The review system allows users to share their opinions, rate movies, and discover new films based on community feedback. With a focus on both design and functionality, K-FLICKS aims to become a go-to destination for movie enthusiasts looking for reliable and well-curated reviews.            </p>
+        </div>
+    </div>
+
+
+    <div class="top-rated-movies-section ">
+        <h2 class=" text-bold text-white">Top Rated Movies</h2>
+        <div class="cards d-flex justify-content-around flex-wrap">
+            <div class="card p-4 border-danger border-3" style="width:305px; height: 450px;">
+                <img src="assets/sardarimg.jpeg" style="width: 16rem;  height:25rem;" alt="" class="card-img p-3">
+            </div>
+            <div class="card p-4 border-danger border-3" style="width:305px; height: 450px;">
+                <img src="assets/starimg.jpg" style="width: 16rem; height:25rem;" alt="" class="card-img  p-3">
+            </div>
+            <div class="card p-4 border-danger border-3" style="width:305px; height: 450px;">
+                <img src="assets/maharaja.webp" style="width: 16rem;  height:25rem;" alt="" class="card-img  p-3">
+            </div>
+            <div class="card p-4 border-danger border-3" style="width:305px; height: 450px;">
+                <img src="assets/rayanimg.webp" style="width: 16rem;  height:25rem;" alt="" class="card-img  p-3">
+            </div>
+        </div>
+        <h4 class="text-right text-white me-5"> <a href="top-trending.html">Explore</a></h4>
+    </div>
+    
+    <div class="geners-section text-center ">
+        <h2 class="text-white">Geners</h2>
+        <div class="cards d-flex justify-content-around flex-wrap">
+            <div class="card p-4 border-danger border-3" style="width:305px; height: 450px;">
+                <img src="https://ganeshvtv.files.wordpress.com/2021/06/karnan-1.jpg" style="width: 16rem;  height:22rem;" alt="" class="card-img p-3">
+                <button class="btn pt-2 pb-2 ps-2 pe-2 mt-2 bg-danger text-white"><a href="Drama.html">Drama</a></button>
+            </div>
+            <div class="card p-4 border-danger border-3" style="width:305px; height: 450px;">
+                <img src="https://th.bing.com/th/id/OIP.lT2wwiqadt6jg7UvORgJJwHaHa?w=175&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" style="width: 16rem;  height:22rem;" alt="" class="card-img p-3">
+                <button class="btn pt-2 pb-2 ps-2 pe-2 mt-2 bg-danger text-white"><a href="romance.html">Romance</a></button>
+            </div>
+            <div class="card p-4 border-danger border-3" style="width:305px; height: 450px;">
+                <img src="https://w0.peakpx.com/wallpaper/442/459/HD-wallpaper-vikram-movie-kamal-haasan-thumbnail.jpg" style="width: 16rem;  height:22rem;" alt="" class="card-img p-3">
+                <button class="btn pt-2 pb-2 ps-2 pe-2 mt-2 bg-danger text-white"><a href="action.html">Action</a></button>
+            </div>
+            <div class="card p-4 border-danger border-3" style="width:305px; height: 450px;">
+                <img src="https://th.bing.com/th/id/R.5bed35bfc5e3ac7b7a7078233fa2d364?rik=LBF5W0ZPH94znQ&riu=http%3a%2f%2f4.bp.blogspot.com%2f-UBIRriuqe-Q%2fTq--FJCtFbI%2fAAAAAAAABv8%2fpsuZtHM6uOc%2fs1600%2fNanban%2bPoster%2b1.jpg&ehk=ZetHt6etsWz75RRQ69eTwzWAJ2dQdzJ8Fff%2blS%2fDSTY%3d&risl=&pid=ImgRaw&r=0" style="width: 16rem;  height:22rem;" alt="" class="card-img p-3">
+                <button class="btn pt-2 pb-2 ps-2 pe-2 mt-2 bg-danger text-white"><a href="comedy.html">Comedy</a></button>
+            </div>
+            <div class="card p-4 border-danger border-3" style="width:305px; height: 450px;">
+                <img src="data:image/jpeg;base64,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" style="width: 16rem;  height:22rem;" alt="" class="card-img p-3">
+                <button class="btn pt-2 pb-2 ps-2 pe-2 mt-2 bg-danger text-white"><a href="thriller.html">Thriller</a></button>
+            </div>
+            <div class="card p-4 border-danger border-3" style="width:305px; height: 450px;">
+                <img src="https://th.bing.com/th/id/OIP.bLbzs2pX9zun45n_-w-tQwAAAA?w=115&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" style="width: 16rem;  height:22rem;" alt="" class="card-img p-3">
+                <button class="btn pt-2 pb-2 ps-2 pe-2 mt-2 bg-danger text-white"><a href="horror.html">Horror</a></button>
+            </div>
+            <div class="card p-4 border-danger border-3" style="width:305px; height: 450px;">
+                <img src="https://th.bing.com/th/id/OIP.GovQJhWN0mcxyRNPFdKnHgHaLH?w=186&h=279&c=7&r=0&o=5&dpr=1.3&pid=1.7" style="width: 16rem;  height:22rem;" alt="" class="card-img p-3">
+                <button class="btn pt-2 pb-2 ps-3 pe-3 mt-2 bg-danger text-white"><a href="sci-fi.html">Sci-Fi</a></button>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="recent-reviews-section container-fluid w-full">
+        <h1 class="text-bold text-center">RECENT REVIEWS</h1>
+        <div class="row recent-reviews row justify-content-around">
+            <div class="col m-3 recent-review border border-danger border-4 rounded-5">
+                <h4>Arun Kumar</h4>
+                <h2 class="mt-4 text-center">Asuran</h2>
+                <p class="text-center mt-4">Review: Asuran is a powerful drama that explores the harsh realities of caste and class struggles in rural Tamil Nadu. Dhanush’s portrayal of the protagonist is both intense and compelling, making it a standout film of the year. The gripping narrative and strong direction make it a must-watch.</p>
+                <div class="date-time d-flex justify-content-between">
+                    <p class="d-inline-block date">August 12, 2024</p>
+                    <p class="d-inline-block time">8:45 PM</p>
+                </div>
+            </div>
+            <div class="col m-3 recent-review border border-danger border-4 rounded-5">
+                <h4>Divya Raj</h4>
+                <h3 class="mt-4">Viduthalai</h3>
+                <p class="text-center mt-4">Review: Vidudhalai delivers a riveting tale of revolution and redemption. The film's strong narrative and engaging performances, particularly by the lead actors, create a memorable cinematic experience. Its portrayal of social issues resonates deeply with the audience.</p>
+                <div class="date-time d-flex justify-content-between">
+                    <p class="d-inline-block date">August 11, 2024</p>
+                    <p class="d-inline-block time">6:30 PM</p>
+                </div>
+            </div>
+            <div class="col m-3 recent-review border border-danger border-4 rounded-5">
+                <h4>Suresh Nair</h4>
+                <h3 class="mt-4">PT Sir</h3>
+                <p class="text-center mt-4">Review: PT SIR is a heartwarming film that highlights the impact of a dedicated teacher on his students. The film's emotional depth and the stellar performance of the lead actor make it a touching and inspirational watch. Its portrayal of the education system is both realistic and uplifting.</p>
+                <div class="date-time d-flex justify-content-between">
+                    <p class="d-inline-block date">August 10, 2024</p>
+                    <p class="d-inline-block time">4:15 PM</p>
+                </div>
+            </div>
+            <div class="col m-3 recent-review border border-danger border-4 rounded-5">
+                <h4>Priya Menon</h4>
+                <h3 class="mt-4">STAR</h3>
+                <p class="text-center mt-4">Review: STAR is an engaging action-drama that combines high-energy sequences with a strong storyline. The film's dynamic performances and impressive visual effects keep the audience entertained from start to finish. It's a standout entry in the Tamil film industry this year.</p>
+                <div class="date-time d-flex justify-content-between">
+                    <p class="d-inline-block date">August 9, 2024</p>
+                    <p class="d-inline-block time">9:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="footer-section bg-dark">
+        <div class="footer-logo">
+            <img src="assets/logo.webp" style="width:80px; height:50px" alt="K-FLICKS">        </div>
+        <div class="social-medias ">
+            <ul >
+                <li >
+                    <i class="fa-solid fa-phone" style="color: #ffffff;"></i>                
+                </li>
+                <li>
+                    <i class="fa-brands fa-whatsapp"  style="color: #ffffff;"></i>                
+                </li>
+                <li>
+                    <i class="fa-solid fa-envelope" style="color: #ffffff;"></i>                
+                </li>
+                <li>
+                    <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>                
+                </li>
+                <!-- <li>
+                    <i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i>                
+                </li> -->
+            </ul>
+        </div>
+        <p class="text-center p-5 text-bold fs-6 text-white m-0"> Moview @2024. All rights reserved</p>
+    </div>
+
+      <!-- Bootstrap JS and dependencies -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

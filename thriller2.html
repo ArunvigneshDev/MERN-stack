@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sita Ramam</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">     
+    <style>
+        .navbar ,body{
+            background-image: linear-gradient(to right, red, black);
+        }
+
+        .navbar{
+            margin-bottom: 70px;
+        }
+
+.navbar-brand img {
+    margin:10px;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: white !important;
+}
+
+
+
+/* Navbar link styles */
+.navbar-nav .nav-link {
+    color: white !important;
+    padding: 10px 30px; /* Adjust padding for better spacing */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition effect */
+    border-radius: 20px;
+    margin-right: 35px;
+}
+
+/* Navbar link hover effect */
+.navbar-nav .nav-link:hover {
+    background-color: red; /* Change background color on hover */
+    color: white !important; /* Ensure text color remains white */
+}
+
+.navbar-nav{
+    margin-left: 58%;
+}
+
+        body {
+            background-color: black;
+        }
+        h2 {
+            font-size: 35px;
+            font-family: sans-serif;
+            font-weight: bold;
+            text-align: center;
+            margin: 30px 0 60px 0;
+        }
+        .container {
+            width: 70%;
+            height: auto;
+            padding: 25px;
+            margin: 50px 0 50px 13%;
+            background-color: aliceblue;
+            border-radius: 20px;
+        }
+        img {
+            width: 80%;
+            height: 80%;
+            margin: 0px 0px 60px 60px;
+            border-radius: 25px;
+        }
+        table {
+            margin-left: 55px;
+        }
+        table td {
+            padding: 15px;
+            font-size: 20px;
+        }
+        .review-container .btn {
+            background-color: red;
+            margin: 40px 0px 70px 43%;
+            color: white;
+            font-weight: bold;
+        }
+        .review-getter {
+            display: none;
+            left: 50%;
+            top: 50%;
+            width: 800px;
+            height: 500px;
+            background-color: rgb(255, 249, 249);
+            opacity: 0.9;
+            border-radius: 30px;
+            z-index: 1;
+            padding: 60px 0 0 160px;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            position: fixed;
+        }
+        .review-getter input {
+            width: 466px;
+            height: 50px;
+            padding-left: 17px;
+            margin: 0 0 25px 0;
+        }
+        .review-getter textarea {
+            padding: 15px;
+            width: 465px;
+        }
+        .review-getter input, .review-getter textarea {
+            display: block;
+            font-size: 18px;
+            border: 2px solid black;
+        }
+        .review-getter .btn {
+            background-color: red;
+            margin: 40px 0px 30px 75%;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        .popup-active .popup, .popup-active .overlay {
+            display: block;
+        }
+        .reviews {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .review {
+            background-color: #fff;
+            border-radius: 10px;
+            width: 25%;
+            padding: 20px;
+            margin: 50px;
+            margin-left: 5%;
+            position: relative;
+            min-height: 150px;
+            display: block;
+        }
+        .review .review-author {
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 16px;
+        }
+        .review .review-content {
+            margin: auto;
+            padding: 0 20px;
+            text-align: center;
+            font-size: 18px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(100% - 40px);
+        }
+        .review .review-date {
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            font-size: 15px;
+            color: gray;
+        }
+        .review .review-time {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 15px;
+            color: gray;
+        }
+        .review .delete-icon {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 20px;
+            color: red;
+        }
+        .review-header {
+            color: white;
+            font-size: 35px;
+            margin: 100px 0 110px 0;
+            display: none;
+        }
+        @media screen and (max-width:768px) {
+            .container {
+                width: 335px;
+                height: auto;
+                padding: 10px;
+                margin: 50px 0 50px 5%;
+                background-color: aliceblue;
+                border-radius: 20px;
+            }
+            img {
+                width: 88%;
+                height: 400px;
+                margin: 0px 0px 60px 20px;
+                border-radius: 25px;
+            }
+            table {
+                margin-left: 5px;
+            }
+            table td {
+                padding: 10px;
+                font-size: 20px;
+            }
+            .review-container .btn {
+                background-color: red;
+                margin: 30px 0px 70px 58%;
+                color: white;
+                font-weight: bold;
+            }
+            .review-getter {
+                display: none;
+                left: 50%;
+                top: 50%;
+                width: 320px;
+                height: 500px;
+                background-color: rgb(255, 249, 249);
+                opacity: 0.9;
+                border-radius: 30px;
+                z-index: 1;
+                padding: 60px 0 0 25px;
+                transform: translate(-50%, -50%);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                z-index: 1000;
+                position: fixed;
+            }
+            .review-getter input {
+                width: 270px;
+                height: 50px;
+                padding-left: 17px;
+                margin: 10px 0 25px 0;
+            }
+            .review-getter textarea {
+                padding: 15px;
+                width: 80%;
+            }
+            .review-getter input, .review-getter textarea {
+                display: block;
+                font-size: 18px;
+            }
+            .review-getter input ,.review-getter textarea{
+                width: 270px;
+            }
+            .review-getter .btn {
+                background-color: red;
+                margin: 40px 0px 30px 50%;
+                color: white;
+                font-weight: bold;
+                border-radius: 10px;
+            }
+            .review {
+            background-color: #fff;
+            border-radius: 10px;
+            width: auto;
+            padding: 10px;
+            margin: 25px;
+            margin-left: 5%;
+            position: relative;
+            min-height: 150px;
+            display: block;
+            height: auto;
+            }
+
+            .reviews{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <a class="navbar-brand" href="#">
+          <img src="assets/logo.webp" style="width:80px; height:50px" alt="K-FLICKS">
+          <h4 class="d-inline-block">K-FLICKS</h4>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link px-3 py-2" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3 py-2" href="index.html">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3 py-2" href="index.html">CONTACT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3 py-2" href="login.html">SIGN IN</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    <div class="container">
+        <h2>Imaikkaa Nodigal</h2>
+        <div class="row">
+            <div class="col">
+                <img src="assets/thriller/IN.avif" alt="Sita Ramam">
+            </div>
+            <div class="col">
+                <div class="details">
+                    <table>
+                        <tr>
+                            <td class="fw-bold">Directed by</td>
+                            <td>R. Ajay Gnanamuthu</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Written by</td>
+                            <td>R. Ajay Gnanamuthu</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Produced by</td>
+                            <td>C. J. Jayakumar</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Starring</td>
+                            <td>Nayanthara<br>
+                                Atharvaa<br>
+                                Vijay sethupathi<br>
+                                Anurag Kashyap
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Cinematography</td>
+                            <td>R.D.Rajasekhar</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Edited by</td>
+                            <td>Bhuvan Srinivasan</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Music by</td>
+                            <td>Hip Hop Tamizha</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Production company</td>
+                            <td>Drumsticks Productions</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Distributed by</td>
+                            <td>Cameo Films</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Release date</td>
+                            <td>5 August 2022</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Budget</td>
+                            <td>est. ₹15 crore</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Box office</td>
+                            <td>est. ₹40 crore</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="review-container">
+            <a class="btn py-2 px-3" onclick="openPopup()">Add review</a>
+        </div>
+    </div>
+    <div class="overlay"></div>
+    <div class="review-getter popup">
+        <input type="text" id="username" placeholder="Enter your name">
+        <textarea name="review" id="reviewText" rows="8" cols="50" placeholder="Enter your review"></textarea>
+        <a class="btn py-2 px-3" onclick="closePopup()" onclick="postReview()" id="postReview">Post review</a>
+    </div>
+    <h2 id="review-header" class="review-header text-center" style="display: none;">Reviews</h2>
+    <div class="reviews"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        let count = 0;
+        function openPopup() {
+            document.body.classList.add('popup-active');
+        }
+        function closePopup() {
+            document.body.classList.remove('popup-active');
+        }
+        document.getElementById("postReview").addEventListener('click', () => {
+            const username = document.getElementById("username").value;
+            const reviewText = document.getElementById("reviewText").value;
+            const currentDate = new Date();
+            if (username && reviewText) {
+                const reviewContainer = document.createElement("div");
+                reviewContainer.classList.add("review");
+                count++;
+                const reviewAuthor = document.createElement("div");
+                reviewAuthor.classList.add("review-author");
+                reviewAuthor.innerText = username;
+                reviewContainer.appendChild(reviewAuthor);
+                const reviewContent = document.createElement("div");
+                reviewContent.classList.add("review-content");
+                reviewContent.innerText = reviewText;
+                reviewContainer.appendChild(reviewContent);
+                const reviewDate = document.createElement("div");
+                reviewDate.classList.add("review-date");
+                reviewDate.innerText = currentDate.toLocaleDateString();
+                reviewContainer.appendChild(reviewDate);
+                const reviewTime = document.createElement("div");
+                reviewTime.classList.add("review-time");
+                reviewTime.innerText = currentDate.toLocaleTimeString();
+                reviewContainer.appendChild(reviewTime);
+                const deleteIcon = document.createElement("span");
+                deleteIcon.classList.add("delete-icon");
+                deleteIcon.innerHTML = "&times;";
+                deleteIcon.onclick = () => {
+                    reviewContainer.remove();
+                    count--;
+                    toggleReviewHeader();
+                };
+                reviewContainer.appendChild(deleteIcon);
+                document.querySelector(".reviews").appendChild(reviewContainer);
+                toggleReviewHeader();
+                document.getElementById("username").value = '';
+                document.getElementById("reviewText").value = '';
+                closePopup();
+            } else {
+                alert("Please fill out both fields.");
+            }
+        });
+        function toggleReviewHeader() {
+            if (count > 0) {
+                document.getElementById("review-header").style.display = "block";
+            } else {
+                document.getElementById("review-header").style.display = "none";
+            }
+        }
+    </script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

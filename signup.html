@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body{
+            background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/b2c3e95b-b7b5-4bb7-a883-f4bfc7472fb7/19fc1a4c-82db-4481-ad08-3a1dffbb8c39/IN-en-20240805-POP_SIGNUP_TWO_WEEKS-perspective_WEB_24a485f6-1820-42be-9b60-1b066f1eb869_medium.jpg);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-buttons">
+            <a href="login.html" class="btn login-btn">Login</a>
+            <a href="signup.html" class="btn signup-btn active">Sign Up</a>
+        </div>
+    </header>
+    <div class="container" style="opacity: 0.7;">
+        <div class="logo">
+            <!-- Add your logo image here -->
+        </div>
+        <form class="signup-form" id="signupForm">
+            <input type="text" placeholder="Username" id="signupUsername" required>
+            <input type="email" placeholder="Email" id="signupEmail" required>
+            <input type="password" placeholder="Password" id="signupPassword" required>
+            <input type="password" placeholder="Confirm Password" id="signupConfirmPassword" required>
+            <button type="submit"><a href="login.html" style="text-decoration: none; color: white;">Sign Up</a></button>
+        </form>
+        <div class="login-link">
+            <p>Already have an account? <a href="login.html">Log in</a></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

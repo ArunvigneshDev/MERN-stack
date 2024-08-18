@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar ,body{
+    background-image: linear-gradient(to right, red, black);
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: white !important;
+}
+
+
+
+/* Navbar link styles */
+.navbar-nav .nav-link {
+    color: white !important;
+    padding: 10px 30px; /* Adjust padding for better spacing */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition effect */
+    border-radius: 20px;
+    margin-right: 35px;
+}
+
+/* Navbar link hover effect */
+.navbar-nav .nav-link:hover {
+    background-color: red; /* Change background color on hover */
+    color: white !important; /* Ensure text color remains white */
+}
+
+.navbar-nav{
+    margin-left: 60%;
+}
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        h2{
+            margin-top: 80px;
+            margin-bottom: 70px;
+        }
+        .drama-head{
+            font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            margin: 120px 0 50px 0;
+
+        }
+
+        .drama-container button{
+            width: 320px;
+        }
+
+        .drama-container .card-img img{
+            width:410px; 
+            height: 560px;
+        }
+
+        .card{
+            margin: 30px;
+            width:410px; 
+            height: 555px;
+        }
+
+
+        .footer-section{
+            text-align: center;
+            background-color: rgb(85, 81, 81);
+            margin: 0;
+        }
+
+        .footer-section .footer-logo{
+            font-size: 20px;
+            color: white;
+            padding: 70px 0 50px 0;
+        }
+
+        a:hover{
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-section{
+            text-align: center;
+        }
+
+        .footer-section .footer-logo{
+            font-size: 20px;
+            color: white;
+            padding: 90px 0 50px 0;
+        }
+
+        .footer-section ul{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .footer-section ul li{
+            list-style-type: none;
+            font-size: 22px;
+        }
+
+        .footer-section .social-medias {
+            width: 300px; 
+            margin-left: 39%;
+        }
+
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        a:hover{
+            color: white;
+            text-decoration: none;
+        }
+
+        /* @media screen and (max-width:768px) {
+            .drama-container .cards{
+                width: 320px;
+                height: 23rem;
+            }
+
+            .drama-container .card-img img{
+                width: 100px;
+            }
+        } */
+        @media screen and (max-width: 768px) {
+    /* .cards {
+        width: 320px;
+        height: 23rem;
+    } */
+    .card{
+        width: 300px;
+        height: 450px;
+    }
+
+    .card-img {
+        height: 85%;
+    }
+
+    .row button{
+        width: 100%;
+    }
+    .footer-section ul{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .footer-section ul li{
+            list-style-type: none;
+            font-size: 22px;
+        }
+
+        .footer-section .social-medias {
+            width: 250px; 
+            margin-left: 15%;
+        }
+
+    
+}
+
+    </style>
+</head>
+<body class="bg-danger">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <a class="navbar-brand" href="#">
+          <img src="assets/logo.webp" style="width:80px; height:50px" alt="K-FLICKS">
+          <h4 class="d-inline-block">K-FLICKS</h4>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link px-3 py-2" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3 py-2" href="index.html">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3 py-2" href="index.html">CONTACT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3 py-2" href="login.html">SIGN IN</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    <div class="geners-section text-center ">
+        <h2 class="text-white">Horror</h2>
+        <div class="cards d-flex justify-content-around flex-wrap">
+            <div class="card p-5 text-center m-3 mb-5" style="width:410px; height: 525px;">
+                <img src="https://sund-images.sunnxt.com/7251/500x750_Maya_7251_4210c5ab-8617-4f47-9031-491ad0410a80.jpg" style="width: 100%;  height:24rem;" alt="" class="card-img">
+                <button class="btn pt-2 pb-2 ps-3 pe-3 mt-4 bg-danger text-white"><a href="maya.html">review</a></button>
+            </div>
+            <div class="card p-5 text-center m-3 mb-5" style="width:410px; height: 525px;">
+                <img  style="width: 100%;  height:24rem;" src="data:image/jpeg;base64,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OtfIACXDY+udL/xb+vkAA5+HgotxzKT0/CotXr5/dDEZRAHignvJR0vW9fBUtwAb7iP/ADYf/X7AAUOHheuaK8eWTAAv7Ljv/fx6a8r9euowMjEAzHiT3nGPnf0QAH7iN65Y1auuZ+tUADXwmL/qI/8Aq/3GAOThcaTazxbpuuVq+ytsAMggIAEACAAMxoABgOZIFABYAUAB4YptJul30+oAaocPitXk084KvHdjGauTDpTx2t7aa+DfkAFc+JX+HG30dQS287ARILC9/dp7flrzq2gALmxVbWJu1SSitOt2/DfxABeOGLXXGuiTpvarbur8tNgGMyyxbJYvGlDb1ejAAYSwr8sWvFwb6d2Ag3DA71x9KacV0W9dbvYBi8ixvb3SVpflvz/qAQUcWHrLH4U+vk27QDLywwSTVwjr+VxUtOlgBmlw2Km1k6afih6AIwCAgAQAIAFTGgFjAcyQKACwAoAIAEACABYAUAEACABAAgAWAFABAAgAQALACABQAQABmNAAMDTihzSSurdWS3ReOGuSjdWaZcCtudX5b7ePj8iNfwdX9jXGtX/T5+RHE4OVrW7V/Nr6fMqLswzYfTre7EjMSABYAUAEACwEQAIt1brXft4jQHscX+r/ADStxyXGufn5KjyrfeWm6+fYwnm0T0OLs0jGLhqs8ajcgggIAEARAGQALACgEdvhv9HZTw48ynpNyj/S2otKbWqdu+R9NNe2s6vc4l6drM/tH2NLElUudvoseRaa621VbfHwKFRy5KxoVlchVCsIgZBiLECIAymAEACwAgCIAEACmA1yE+Jm1yOcnH+65Nx0202KbsTVFEjKACABEAiAMgAWAFAIqihkSDsASCPInwQ0JP/Z" alt="" class="card-img">
+                <button class="btn pt-2 pb-2 ps-3 pe-3 mt-4 bg-danger text-white"><a href="aswins.html">review</a></button>
+            </div>
+            <div class="card p-5 text-center m-3 mb-5" style="width:410px; height: 525px;">
+                <img src="https://static.moviecrow.com/marquee/pisasu-first-look-poster/49778_thumb_665.jpg" style="width: 100%;  height:24rem;" alt="" class="card-img">
+                <button class="btn pt-2 pb-2 ps-3 pe-3 mt-4 bg-danger text-white"><a href="pisaasu.html">review</a></button>
+            </div>
+            <div class="card p-5 text-center m-3 mb-5" style="width:410px; height: 525px;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1Z21X_0lj8enF3xjjO9Qv643n7_PRwqK9Q&s" alt="" class="card-img"  style="width: 100%;  height:24rem;">
+                <button class="btn pt-2 pb-2 ps-3 pe-3 mt-4 bg-danger text-white"><a href="yavarum nalam.html">review</a></button>
+            </div>
+            <div class="card p-5 text-center m-3 mb-5" style="width:410px; height: 525px;">
+                <img src="https://static.moviecrow.com/gallery/20220823/203664-di2.jpg" style="width: 100%;  height:24rem;" alt="" class="card-img">
+                <button class="btn pt-2 pb-2 ps-3 pe-3 mt-4 bg-danger text-white"><a href="diary.html">review</a></button>
+            </div>
+            <div class="card p-5 text-center m-3 mb-5" style="width:410px; height: 525px;">
+                <img src="https://m.media-amazon.com/images/M/MV5BNzBiYWY3ZmItYTJlNy00ZTU0LTk2MzYtMDBiOGJiYjZmMTNkXkEyXkFqcGdeQXVyMjcyOTUxOTQ@._V1_.jpg" style="width: 100%;  height:24rem;" alt="" class="card-img">
+                <button class="btn pt-2 pb-2 ps-3 pe-3 mt-4 bg-danger text-white"><a href="aval.html">review</a></button>
+            </div>
+            <!-- <div class="card p-5 text-center m-3 mb-5" style="width:410px; height: 525px;">
+                <img src="assets/romance/VA.jpeg" style="width: 20rem;  height:24rem;" alt="" class="card-img">
+                <button class="btn pt-2 pb-2 ps-3 pe-3 mt-4 bg-danger text-white"><a href="romance7.html">review</a></button>
+            </div>
+            <div class="card p-5 text-center m-3 mb-5" style="width:410px; height: 525px;">
+                <img src="assets/romance/madarasapatinam.jpg" style="width: 20rem;  height:24rem;" alt="" class="card-img">
+                <button class="btn pt-2 pb-2 ps-3 pe-3 mt-4 bg-danger text-white"><a href="romance8.html">review</a></button>
+            </div> -->
+            
+        </div>
+    </div>
+    
+
+    <div class="footer-section bg-dark">
+        <div class="footer-logo">
+            <img src="assets/logo.webp" style="width:80px; height:50px" alt="K-FLICKS">        </div>
+        <div class="social-medias ">
+            <ul >
+                <li >
+                    <i class="fa-solid fa-phone" style="color: #ffffff;"></i>                
+                </li>
+                <li>
+                    <i class="fa-brands fa-whatsapp"  style="color: #ffffff;"></i>                
+                </li>
+                <li>
+                    <i class="fa-solid fa-envelope" style="color: #ffffff;"></i>                
+                </li>
+                <li>
+                    <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>                
+                </li>
+                <!-- <li>
+                    <i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i>                
+                </li> -->
+            </ul>
+        </div>
+        <p class="text-center p-5 text-bold fs-6 text-white m-0"> Moview @2024. All rights reserved</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
